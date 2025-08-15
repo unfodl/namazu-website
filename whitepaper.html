@@ -16,30 +16,84 @@
             </div>
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="whitepaper.html" class="nav-link active">White Paper</a>
+                <a href="whitepaper.html" class="nav-link active">Why and How</a>
             </nav>
         </header>
         
         <main>
             <div class="whitepaper-container">
                 <div class="whitepaper-header">
-                    <h1 class="whitepaper-title">Namazu White Paper</h1>
-                    <p class="whitepaper-subtitle">Unlocking Coverage for Uninsurable Risks</p>
+                    <h1 class="whitepaper-title">Why and How</h1>
+                    <p class="whitepaper-subtitle">Understanding Namazu's Decentralized Risk Pool</p>
                 </div>
                 
-                <div class="pdf-container">
-                    <iframe 
-                        src="./Namazu.pdf" 
-                        class="pdf-viewer"
-                        title="Namazu White Paper"
-                        frameborder="0">
-                    </iframe>
-                </div>
-                
-                <div class="download-section">
-                    <a href="./Namazu.pdf" download class="download-btn">
-                        📄 Download PDF
-                    </a>
+                <div class="content-section">
+                    <div class="why-section">
+                        <h2>Why</h2>
+                        <p>We believe DeFi lets individuals, governments, and companies trade risk and obtain coverage in ways that traditional instruments could not.</p>
+                    </div>
+                    
+                    <div class="what-section">
+                        <h2>What is Namazu</h2>
+                        <p>Namazu is a decentralized, perpetual parametric risk pool where DAO members collaboratively design and manage risk tranches. They define event exposures and capacity allocations, creating a continuously adaptive marketplace for risk.</p>
+                        <p>Liquidity Providers (LPs) supply capital to underwrite these tranches and earn premiums in exchange for tail-risk exposure. The pool has no fixed maturities and rebalances as new risk structures and capacity demands appear. DAO governance curates the risk mix to maintain transparency, capital efficiency, and modular underwriting in an open, continuous liquidity system.</p>
+                    </div>
+                    
+                    <div class="roles-section">
+                        <h2>Roles</h2>
+                        <ul>
+                            <li><strong>DAO members (NMZ holders)</strong> propose, configure, and manage tranches and capacity.</li>
+                            <li><strong>LPs</strong> commit capital to DAO-defined tranches and earn yield.</li>
+                            <li><strong>Coverage buyers</strong> (future iterations) may purchase capacity slices in a secondary market.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="value-section">
+                        <h2>Value accrual</h2>
+                        <p>There are realistic periods when the pool's expected losses are higher than the premiums collected. This can come from conservative assumptions, temporary risk spikes, or governance choices. In these windows LPs can have negative expected ROI, which nudges short-tenor participation, rotation, or mission-driven capital.</p>
+                        <p>NMZ is an access token that earns a fixed share of premiums. Holding NMZ has an ongoing carry r, which is the periodic cost to keep the access right, similar to a funding or subscription cost. If the premium share credited to NMZ is larger than this carry, NMZ accrues value even when LPs are negative.</p>
+                    </div>
+                    
+                    <div class="formulas-section">
+                        <h2>Formulas (per period, multiple events)</h2>
+                        <div class="formula-intro">
+                            <p>Events i=1..n with premium rate π<sub>i</sub> per unit capital, probability P<sub>i</sub>, and loss per unit λ<sub>i</sub>. Tranche weights T<sub>i</sub> with ∑<sub>i</sub>T<sub>i</sub>≤1.</p>
+                            <p>One NMZ grants q units of deployable capacity and earns fraction f of premiums. Carry is r.</p>
+                        </div>
+                        
+                        <div class="formula-group">
+                            <h3>LP expected ROI per unit capital</h3>
+                            <div class="formula">
+                                <div class="formula-main">
+                                    E[ROI<sub>LP</sub>] = ∑<sub>i=1</sub><sup>n</sup> T<sub>i</sub>(π<sub>i</sub> - P<sub>i</sub>λ<sub>i</sub>)
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="formula-group">
+                            <h3>NMZ expected accrual per token</h3>
+                            <div class="formula">
+                                <div class="formula-main">
+                                    E[ΔV<sub>NMZ</sub>] = fq∑<sub>i=1</sub><sup>n</sup> T<sub>i</sub>π<sub>i</sub> - r
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="formula-group">
+                            <h3>Condition for LP < 0 and NMZ > 0</h3>
+                            <div class="formula">
+                                <div class="formula-main">
+                                    ∑<sub>i</sub>T<sub>i</sub>P<sub>i</sub>λ<sub>i</sub> > ∑<sub>i</sub>T<sub>i</sub>π<sub>i</sub> and fq∑<sub>i</sub>T<sub>i</sub>π<sub>i</sub> > r
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-section">
+                        <h2>Example</h2>
+                        <p>Premiums equal 8% of capital and expected loss equals 10%, so LP expected ROI is −2%.</p>
+                        <p>With f=25% and q=1, the premium share to NMZ is 2%. If r=1%, NMZ accrual is 2%−1%=+1%.</p>
+                    </div>
                 </div>
             </div>
         </main>

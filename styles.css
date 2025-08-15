@@ -75,7 +75,7 @@ header {
 
 /* White Paper Page Styles */
 .whitepaper-container {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -99,43 +99,107 @@ header {
     font-weight: 400;
 }
 
-.pdf-container {
+.content-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.why-section, .what-section, .roles-section, .value-section, .example-section {
+    margin-bottom: 3rem;
+}
+
+.why-section h2, .what-section h2, .roles-section h2, .value-section h2, .example-section h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.why-section p, .what-section p, .value-section p, .example-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.roles-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.roles-section li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.roles-section li:before {
+    content: "•";
+    color: #cccccc;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.formulas-section {
+    margin-top: 3rem;
+    padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.pdf-viewer {
-    width: 100%;
-    height: 80vh;
-    border-radius: 8px;
-    background: #ffffff;
-}
-
-.download-section {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.download-btn {
-    display: inline-block;
-    background: linear-gradient(45deg, #ffffff, #cccccc);
-    color: #000000;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border-radius: 50px;
+.formulas-section h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
     font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+    text-align: center;
 }
 
-.download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
+.formula-intro {
+    margin-bottom: 2rem;
 }
+
+.formula-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.formula-group {
+    margin-bottom: 2rem;
+}
+
+.formula-group h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.formula {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.formula-main {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', serif;
+    line-height: 1.4;
+}
+
+
 
 
 .logo-text {
