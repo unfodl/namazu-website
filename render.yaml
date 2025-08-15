@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: namazu-website
+    env: python
+    buildCommand: echo "Static site - no build required"
+    startCommand: python3 render-server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.8
+    healthCheckPath: /
+    autoDeploy: true

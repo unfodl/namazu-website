@@ -1,0 +1,2 @@
+# No external dependencies required for static file serving
+# This file is required by Render for Python environment setup

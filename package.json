@@ -4,8 +4,9 @@
     "description": "Namazu - Unlocking Coverage for Uninsurable Risks",
     "main": "index.html",
     "scripts": {
-      "start": "python3 -m http.server 8000",
-      "dev": "python3 -m http.server 8000",
+      "start": "python3 render-server.py",
+      "dev": "python3 -m http.server 8000 --bind 0.0.0.0",
+      "local": "python3 -m http.server 8000",
       "build": "echo 'Static site - no build step required'",
       "deploy": "echo 'Deploy to your preferred hosting service'"
     },
