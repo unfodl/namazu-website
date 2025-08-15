@@ -47,6 +47,95 @@ header {
     gap: 0.75rem;
 }
 
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* White Paper Page Styles */
+.whitepaper-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.whitepaper-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.whitepaper-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.whitepaper-subtitle {
+    font-size: 1.25rem;
+    color: #cccccc;
+    font-weight: 400;
+}
+
+.pdf-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 80vh;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.download-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #ffffff, #cccccc);
+    color: #000000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
+}
 
 
 .logo-text {
@@ -166,6 +255,18 @@ footer {
     .hero-right {
         text-align: center;
         align-items: center;
+    }
+    
+    .whitepaper-container {
+        padding: 1rem;
+    }
+    
+    .whitepaper-title {
+        font-size: 2.5rem;
+    }
+    
+    .pdf-viewer {
+        height: 60vh;
     }
     
     .title {
