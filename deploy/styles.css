@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #0a0a2e 0%, #1a1a4a 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* White Paper Page Styles */
+.whitepaper-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.whitepaper-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.whitepaper-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.whitepaper-subtitle {
+    font-size: 1.25rem;
+    color: #cccccc;
+    font-weight: 400;
+}
+
+.content-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.why-section, .what-section, .roles-section, .value-section, .example-section {
+    margin-bottom: 3rem;
+}
+
+.why-section h2, .what-section h2, .roles-section h2, .value-section h2, .example-section h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.why-section p, .what-section p, .value-section p, .example-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.roles-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.roles-section li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.roles-section li:before {
+    content: "•";
+    color: #cccccc;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.formulas-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.formulas-section h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.formula-intro {
+    margin-bottom: 2rem;
+}
+
+.formula-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.formula-group {
+    margin-bottom: 2rem;
+}
+
+.formula-group h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.formula {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.formula-main {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', serif;
+    line-height: 1.4;
+}
+
+
+
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-right {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 500px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.cta {
+    margin-top: 2rem;
+}
+
+.coming-soon-btn {
+    background: linear-gradient(45deg, #ffffff, #cccccc);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+    font-family: inherit;
+}
+
+.coming-soon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
+}
+
+/* Footer */
+footer {
+    padding: 2rem 4rem;
+    text-align: center;
+    color: #666;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 2rem;
+    }
+    
+    .hero {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .hero-right {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .whitepaper-container {
+        padding: 1rem;
+    }
+    
+    .whitepaper-title {
+        font-size: 2.5rem;
+    }
+    
+    .pdf-viewer {
+        height: 60vh;
+    }
+    
+    .title {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    footer {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+}
